@@ -4,7 +4,7 @@ include('Classes/Route.php');
 
 // Add base route (startpage)
 Route::add('/',function(){
-    echo 'Welcome :-)';
+    $ctrl->indexAction()
 });
 
 // Simple test route that simulates static html file
