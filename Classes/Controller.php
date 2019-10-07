@@ -16,4 +16,12 @@ class Controller{
     public function indexAction(){
 
     }
+
+    public function loginActionGet(){
+        $this->out->loginOutput();
+    }
+
+    public function registerActionget(){
+        $this->out->registerOutput();
+    }
 }

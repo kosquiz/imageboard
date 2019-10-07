@@ -1,4 +1,9 @@
 <?php
+
+
+session_set_cookie_params('3600'); // 1 hour
+session_start();
+
 // Include router class
 require_once('Classes/Route.php');
 require_once('Classes/Controller.php');
@@ -13,6 +18,19 @@ Route::add($prefix.'/',function(){
     global $ctrl;
     $ctrl->indexAction();
 });
+
+
+Route::add($prefix.'/login',function(){
+    global $ctrl;
+    $ctrl->loginActionGet();
+}, 'get');
+
+
+Route::add($prefix.'/register',function(){
+    global $ctrl;
+    $ctrl->registerActionGet();
+}, 'get');
+
 
 // Simple test route that simulates static html file
 Route::add($prefix.'/test.html',function(){
