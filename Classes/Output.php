@@ -6,8 +6,12 @@ class Output{
 
     }
 
+    public function indexOutput(){
+        
+    }
     
-    public function loginOutput(){
+    public function loginOutput($error){
+        echo $error . "<br>";
         ?>
         <form method="post">
             <input type="text" name="e-mail"/>
@@ -17,7 +21,8 @@ class Output{
         <?php
     }
 
-    public function registerOutput(){
+    public function registerOutput($error){
+        echo $error . "<br>";
         ?>
         <form method="post">
             <input type="text" name="e-mail"/>
@@ -25,5 +30,9 @@ class Output{
             <input type="submit" value="send"/>
         </form>
         <?php
+    }
+
+    public function messageOutput($msg){
+        echo $msg;
     }
 }

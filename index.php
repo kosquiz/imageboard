@@ -25,12 +25,20 @@ Route::add($prefix.'/login',function(){
     $ctrl->loginActionGet();
 }, 'get');
 
+Route::add($prefix.'/login',function(){
+    global $ctrl;
+    $ctrl->loginActionPost();
+}, 'post');
+
 
 Route::add($prefix.'/register',function(){
     global $ctrl;
     $ctrl->registerActionGet();
 }, 'get');
-
+Route::add($prefix.'/register',function(){
+    global $ctrl;
+    $ctrl->registerActionPost();
+}, 'post');
 
 // Simple test route that simulates static html file
 Route::add($prefix.'/test.html',function(){
