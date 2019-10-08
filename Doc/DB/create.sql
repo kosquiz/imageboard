@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `imgboard`.`pictures` (
   `users_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_pictures_users1`
-    FOREIGN KEY (`users_id`)
+	FOREIGN KEY (`users_id`)
     REFERENCES `imgboard`.`users` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
